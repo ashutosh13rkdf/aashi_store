@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class PrintJob {
-	@JmsListener(destination = "printJob")
+	@JmsListener(destination = "printJobTest")
 	public void receiveQueue(String sourceURL) {
 		System.out.println("Message Received: " + sourceURL);
 			try {

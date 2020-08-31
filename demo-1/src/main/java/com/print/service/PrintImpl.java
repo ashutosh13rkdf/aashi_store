@@ -10,9 +10,9 @@ public class PrintImpl implements Print {
 @Autowired
 ApplicationContext ctx;
 	@Override
-	public String insert(String filePath) {
+	public String insert(String filePath, String queueName) {
 		JmsTemplate jms = ctx.getBean(JmsTemplate.class);
-		jms.convertAndSend("printJob", filePath);
+		jms.convertAndSend(queueName, filePath);
 		return "success";
 	}
 

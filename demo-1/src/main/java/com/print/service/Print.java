@@ -4,5 +4,5 @@ import org.springframework.stereotype.Service;
 
 @Service
 public interface Print {
-public String insert(String filePath);
+public String insert(String filePath, String queueName);
 }
